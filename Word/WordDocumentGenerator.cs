@@ -55,6 +55,8 @@ namespace DocumentService.Word
                     }
                 }
 
+                //F:\csharp_codes\DocumentServiceWebAPI\decodedFolder\decodedFile.docx
+                Console.WriteLine(templateFilePath);
                 // Create document of the template
                 XWPFDocument document = GetXWPFDocument(templateFilePath);
 

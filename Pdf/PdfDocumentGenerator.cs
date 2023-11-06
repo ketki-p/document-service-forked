@@ -38,7 +38,7 @@ namespace DocumentService.Pdf
                 
             string directoryPath = Path.GetDirectoryName(outputFilePath);
             string tempHtmlFilePath = Path.Combine(directoryPath, "Temp");
-            string tempHtmlFile = Path.Combine(tempHtmlFilePath, "modifiedHtml.html");
+            string tempHtmlFile = Path.Combine(tempHtmlFilePath, "modifiedHtml");
 
             if (!Directory.Exists(tempHtmlFilePath))
             {
@@ -72,8 +72,9 @@ namespace DocumentService.Pdf
                 string output = process.StandardOutput.ReadToEnd();
                 string errors = process.StandardError.ReadToEnd();
             }
+            Console.WriteLine("cmd process completed");
 
-            File.Delete(modifiedHtmlFilePath);
+            //File.Delete(modifiedHtmlFilePath);
         }
     }
 }

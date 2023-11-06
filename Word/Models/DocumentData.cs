@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swashbuckle.AspNetCore.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace DocumentService.Word.Models
     /// <summary>
     /// Represents the data for a Word document, including content placeholders and table data.
     /// </summary>
+    [SwaggerSchema("DocumentDataForWord")]
     public class DocumentData
     {
         /// <summary>
